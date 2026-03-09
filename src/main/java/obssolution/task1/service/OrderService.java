@@ -14,8 +14,6 @@ import obssolution.task1.repository.OrderRepository;
 import obssolution.task1.service.interfaces.IOrderService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.JpaSort;
 import org.springframework.stereotype.Service;
 
 @Service
