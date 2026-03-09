@@ -1,7 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: /db/changelog/init.sql
-  - include:
-      file: /db/changelog/init-pump-data-test.sql
-  - include:
-      file: /db/changelog/order-test-scenario-data.sql
