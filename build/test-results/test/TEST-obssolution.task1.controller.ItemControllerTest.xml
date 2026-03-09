@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="obssolution.task1.controller.ItemControllerTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-03-09T09:45:02.160Z" hostname="MacBookPro" time="0.137">
+  <properties/>
+  <testcase name="getAllItemsStock()" classname="obssolution.task1.controller.ItemControllerTest" time="0.05"/>
+  <testcase name="getAllItems()" classname="obssolution.task1.controller.ItemControllerTest" time="0.012"/>
+  <testcase name="createItem()" classname="obssolution.task1.controller.ItemControllerTest" time="0.013"/>
+  <testcase name="getItemById()" classname="obssolution.task1.controller.ItemControllerTest" time="0.008"/>
+  <testcase name="updateItem()" classname="obssolution.task1.controller.ItemControllerTest" time="0.01"/>
+  <testcase name="deleteItem()" classname="obssolution.task1.controller.ItemControllerTest" time="0.013"/>
+  <testcase name="createItemWithEmptyAttributes()" classname="obssolution.task1.controller.ItemControllerTest" time="0.006"/>
+  <system-out><![CDATA[2026-03-09T16:45:02.161+07:00  INFO 11005 --- [task] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [obssolution.task1.controller.ItemControllerTest]: ItemControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-09T16:45:02.164+07:00  INFO 11005 --- [task] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration obssolution.task1.TaskApplication for test class obssolution.task1.controller.ItemControllerTest
+Hibernate: select i1_0.id,i1_0.name,i1_0.price,cast((sum(case when i2_0.type='T' then i2_0.qty else 0 end)-sum(case when i2_0.type='W' then i2_0.qty else 0 end)) as integer) from item i1_0 left join inventory i2_0 on i1_0.id=i2_0.item_id group by i1_0.id,i1_0.name,i1_0.price order by i1_0.id desc fetch first ? rows only
+Hibernate: select count(i1_0.id) from item i1_0 left join inventory i2_0 on i1_0.id=i2_0.item_id group by i1_0.id,i1_0.name,i1_0.price
+2026-03-09T16:45:02.218+07:00  INFO 11005 --- [task] [    Test worker] o.task1.controller.ItemControllerTest    : {"content":[{"id":-1,"name":"Desk","price":150.00,"stock":85},{"id":-2,"name":"Office Chair","price":120.50,"stock":135},{"id":-3,"name":"Monitor","price":200.00,"stock":60},{"id":-4,"name":"Keyboard","price":45.99,"stock":60},{"id":-5,"name":"Mouse","price":25.49,"stock":95},{"id":-6,"name":"Printer","price":350.00,"stock":85},{"id":-7,"name":"Paper Shredder","price":80.00,"stock":60},{"id":-8,"name":"File Cabinet","price":230.00,"stock":30},{"id":-9,"name":"Stationery Set","price":15.99,"stock":45},{"id":-10,"name":"Whiteboard","price":180.00,"stock":60}],"empty":false,"first":true,"last":false,"number":0,"numberOfElements":10,"pageable":{"offset":0,"pageNumber":0,"pageSize":10,"paged":true,"sort":{"empty":false,"sorted":true,"unsorted":false},"unpaged":false},"size":10,"sort":{"empty":false,"sorted":true,"unsorted":false},"totalElements":11,"totalPages":2}
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 order by i1_0.id desc offset ? rows fetch first ? rows only
+Hibernate: select count(i1_0.id) from item i1_0
+2026-03-09T16:45:02.233+07:00  INFO 11005 --- [task] [    Test worker] o.task1.controller.ItemControllerTest    : {"content":[{"id":-1,"name":"Desk","price":150.00},{"id":-2,"name":"Office Chair","price":120.50},{"id":-3,"name":"Monitor","price":200.00},{"id":-4,"name":"Keyboard","price":45.99},{"id":-5,"name":"Mouse","price":25.49},{"id":-6,"name":"Printer","price":350.00},{"id":-7,"name":"Paper Shredder","price":80.00},{"id":-8,"name":"File Cabinet","price":230.00},{"id":-9,"name":"Stationery Set","price":15.99},{"id":-10,"name":"Whiteboard","price":180.00}],"empty":false,"first":true,"last":false,"number":0,"numberOfElements":10,"pageable":{"offset":0,"pageNumber":0,"pageSize":10,"paged":true,"sort":{"empty":false,"sorted":true,"unsorted":false},"unpaged":false},"size":10,"sort":{"empty":false,"sorted":true,"unsorted":false},"totalElements":11,"totalPages":2}
+Hibernate: insert into item (name,price,id) values (?,?,default)
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+Hibernate: update item set name=?,price=? where id=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+Hibernate: select i1_0.item_id,i1_0.id,i1_0.qty,i1_0.type from inventory i1_0 where i1_0.item_id=?
+Hibernate: delete from item where id=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+2026-03-09T16:45:02.296+07:00  INFO 11005 --- [task] [    Test worker] o.task1.controller.ItemControllerTest    : {"status":400,"error":"Validation Error","message":{"price":"must not be null","name":"must not be blank"}}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

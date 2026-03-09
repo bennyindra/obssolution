@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="obssolution.task1.TaskApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-03-09T09:44:48.894Z" hostname="MacBookPro" time="12.041">
+  <properties/>
+  <testcase name="contextLoads()" classname="obssolution.task1.TaskApplicationTests" time="0.489"/>
+  <system-out><![CDATA[16:44:49.487 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [obssolution.task1.TaskApplicationTests]: TaskApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:44:49.733 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration obssolution.task1.TaskApplication for test class obssolution.task1.TaskApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-03-09T16:44:50.555+07:00  INFO 11005 --- [task] [    Test worker] obssolution.task1.TaskApplicationTests   : Starting TaskApplicationTests using Java 21.0.6 with PID 11005 (started by macbook in /Users/macbook/projects/benny-projects/obssolution)
+2026-03-09T16:44:50.557+07:00  INFO 11005 --- [task] [    Test worker] obssolution.task1.TaskApplicationTests   : The following 1 profile is active: "test"
+2026-03-09T16:44:51.546+07:00  INFO 11005 --- [task] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-09T16:44:51.699+07:00  INFO 11005 --- [task] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 3 JPA repository interfaces.
+2026-03-09T16:44:52.504+07:00  INFO 11005 --- [task] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-09T16:44:52.836+07:00  INFO 11005 --- [task] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:taskdb user=SA
+2026-03-09T16:44:52.843+07:00  INFO 11005 --- [task] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-09T16:44:53.061+07:00  INFO 11005 --- [task] [    Test worker] liquibase.database                       : Set default schema name to PUBLIC
+2026-03-09T16:44:53.523+07:00  INFO 11005 --- [task] [    Test worker] liquibase.snapshot                       : Creating snapshot
+2026-03-09T16:44:53.562+07:00  INFO 11005 --- [task] [    Test worker] liquibase.changelog                      : Creating database changelog table with name: PUBLIC.DATABASECHANGELOG
+2026-03-09T16:44:53.799+07:00  INFO 11005 --- [task] [    Test worker] liquibase.snapshot                       : Creating snapshot
+2026-03-09T16:44:53.846+07:00  INFO 11005 --- [task] [    Test worker] liquibase.lockservice                    : Successfully acquired change log lock
+2026-03-09T16:44:53.847+07:00  INFO 11005 --- [task] [    Test worker] liquibase.command                        : Using deploymentId: 3049492482
+2026-03-09T16:44:53.849+07:00  INFO 11005 --- [task] [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2026-03-09T16:44:53.885+07:00  INFO 11005 --- [task] [    Test worker] liquibase.ui                             : Running Changeset: db/changelog/init.sql::raw::includeAll
+2026-03-09T16:44:53.918+07:00  INFO 11005 --- [task] [    Test worker] liquibase.changelog                      : Custom SQL executed
+2026-03-09T16:44:53.920+07:00  INFO 11005 --- [task] [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/init.sql::raw::includeAll ran successfully in 32ms
+2026-03-09T16:44:53.927+07:00  INFO 11005 --- [task] [    Test worker] liquibase.ui                             : Running Changeset: db/changelog/init-pump-data-test.sql::raw::includeAll
+2026-03-09T16:44:53.973+07:00  INFO 11005 --- [task] [    Test worker] liquibase.changelog                      : Custom SQL executed
+2026-03-09T16:44:53.976+07:00  INFO 11005 --- [task] [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/init-pump-data-test.sql::raw::includeAll ran successfully in 49ms
+2026-03-09T16:44:53.981+07:00  INFO 11005 --- [task] [    Test worker] liquibase.ui                             : Running Changeset: db/changelog/order-test-scenario-data.sql::raw::includeAll
+2026-03-09T16:44:53.985+07:00  INFO 11005 --- [task] [    Test worker] liquibase.changelog                      : Custom SQL executed
+2026-03-09T16:44:53.985+07:00  INFO 11005 --- [task] [    Test worker] liquibase.changelog                      : ChangeSet db/changelog/order-test-scenario-data.sql::raw::includeAll ran successfully in 3ms
+2026-03-09T16:44:53.997+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2026-03-09T16:44:53.997+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : Run:                          3
+2026-03-09T16:44:53.998+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : Previously run:               0
+2026-03-09T16:44:53.998+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : Filtered out:                 0
+2026-03-09T16:44:53.998+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : -------------------------------
+2026-03-09T16:44:53.999+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : Total change sets:            3
+2026-03-09T16:44:54.000+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : Update summary generated
+2026-03-09T16:44:54.004+07:00  INFO 11005 --- [task] [    Test worker] liquibase.command                        : Update command completed successfully.
+2026-03-09T16:44:54.004+07:00  INFO 11005 --- [task] [    Test worker] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 11
+2026-03-09T16:44:54.007+07:00  INFO 11005 --- [task] [    Test worker] liquibase.lockservice                    : Successfully released change log lock
+2026-03-09T16:44:54.009+07:00  INFO 11005 --- [task] [    Test worker] liquibase.command                        : Command execution complete
+2026-03-09T16:44:56.287+07:00  INFO 11005 --- [task] [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-09T16:44:56.357+07:00  INFO 11005 --- [task] [    Test worker] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.4.Final
+2026-03-09T16:44:56.809+07:00  INFO 11005 --- [task] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-09T16:44:56.875+07:00  INFO 11005 --- [task] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:taskdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TASKDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-09T16:44:57.872+07:00  INFO 11005 --- [task] [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-09T16:44:57.880+07:00  INFO 11005 --- [task] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-09T16:44:57.964+07:00  INFO 11005 --- [task] [    Test worker] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-09T16:44:59.898+07:00  WARN 11005 --- [task] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-09T16:45:00.332+07:00  INFO 11005 --- [task] [    Test worker] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:taskdb'
+2026-03-09T16:45:00.432+07:00  INFO 11005 --- [task] [    Test worker] obssolution.task1.TaskApplicationTests   : Started TaskApplicationTests in 10.424 seconds (process running for 13.467)
+2026-03-09T16:45:00.434+07:00  WARN 11005 --- [task] [    Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-09T16:45:00.434+07:00  WARN 11005 --- [task] [    Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+]]></system-out>
+  <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (/Users/macbook/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.17.8/f09415827a71be7ed621c7bd02550678f28bc81c/byte-buddy-agent-1.17.8.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="obssolution.task1.controller.InventoryControllerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-03-09T09:45:00.941Z" hostname="MacBookPro" time="1.216">
+  <properties/>
+  <testcase name="getInventoryList()" classname="obssolution.task1.controller.InventoryControllerTest" time="0.308"/>
+  <testcase name="saveInventory()" classname="obssolution.task1.controller.InventoryControllerTest" time="0.123"/>
+  <testcase name="getInventoryById()" classname="obssolution.task1.controller.InventoryControllerTest" time="0.008"/>
+  <testcase name="editInventory()" classname="obssolution.task1.controller.InventoryControllerTest" time="0.02"/>
+  <testcase name="deleteInventory()" classname="obssolution.task1.controller.InventoryControllerTest" time="0.021"/>
+  <testcase name="createInventoryWithNullAttributes()" classname="obssolution.task1.controller.InventoryControllerTest" time="0.033"/>
+  <system-out><![CDATA[2026-03-09T16:45:00.944+07:00  INFO 11005 --- [task] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [obssolution.task1.controller.InventoryControllerTest]: InventoryControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-09T16:45:00.959+07:00  INFO 11005 --- [task] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration obssolution.task1.TaskApplication for test class obssolution.task1.controller.InventoryControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-03-09T16:45:00.988+07:00  INFO 11005 --- [task] [    Test worker] o.t.controller.InventoryControllerTest   : Starting InventoryControllerTest using Java 21.0.6 with PID 11005 (started by macbook in /Users/macbook/projects/benny-projects/obssolution)
+2026-03-09T16:45:00.989+07:00  INFO 11005 --- [task] [    Test worker] o.t.controller.InventoryControllerTest   : The following 1 profile is active: "test"
+2026-03-09T16:45:01.194+07:00  INFO 11005 --- [task] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-09T16:45:01.207+07:00  INFO 11005 --- [task] [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 3 JPA repository interfaces.
+2026-03-09T16:45:01.281+07:00  INFO 11005 --- [task] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-03-09T16:45:01.283+07:00  INFO 11005 --- [task] [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:taskdb user=SA
+2026-03-09T16:45:01.283+07:00  INFO 11005 --- [task] [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-03-09T16:45:01.284+07:00  INFO 11005 --- [task] [    Test worker] liquibase.database                       : Set default schema name to PUBLIC
+2026-03-09T16:45:01.300+07:00  INFO 11005 --- [task] [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2026-03-09T16:45:01.318+07:00  INFO 11005 --- [task] [    Test worker] liquibase.ui                             : Database is up to date, no changesets to execute
+2026-03-09T16:45:01.319+07:00  INFO 11005 --- [task] [    Test worker] liquibase.changelog                      : Reading from PUBLIC.DATABASECHANGELOG
+2026-03-09T16:45:01.322+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : UPDATE SUMMARY
+2026-03-09T16:45:01.322+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : Run:                          0
+2026-03-09T16:45:01.322+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : Previously run:               3
+2026-03-09T16:45:01.322+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : Filtered out:                 0
+2026-03-09T16:45:01.322+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : -------------------------------
+2026-03-09T16:45:01.322+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : Total change sets:            3
+2026-03-09T16:45:01.322+07:00  INFO 11005 --- [task] [    Test worker] liquibase.util                           : Update summary generated
+2026-03-09T16:45:01.323+07:00  INFO 11005 --- [task] [    Test worker] liquibase.command                        : Command execution complete
+2026-03-09T16:45:01.338+07:00  INFO 11005 --- [task] [    Test worker] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-09T16:45:01.354+07:00  INFO 11005 --- [task] [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-09T16:45:01.355+07:00  INFO 11005 --- [task] [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:taskdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: TASKDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-09T16:45:01.390+07:00  INFO 11005 --- [task] [    Test worker] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-09T16:45:01.391+07:00  INFO 11005 --- [task] [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-09T16:45:01.478+07:00  WARN 11005 --- [task] [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-09T16:45:01.576+07:00  INFO 11005 --- [task] [    Test worker] o.s.b.h.a.H2ConsoleAutoConfiguration     : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:taskdb'
+2026-03-09T16:45:01.601+07:00  INFO 11005 --- [task] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-03-09T16:45:01.601+07:00  INFO 11005 --- [task] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-03-09T16:45:01.605+07:00  INFO 11005 --- [task] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2026-03-09T16:45:01.624+07:00  INFO 11005 --- [task] [    Test worker] o.t.controller.InventoryControllerTest   : Started InventoryControllerTest in 0.656 seconds (process running for 14.659)
+2026-03-09T16:45:01.625+07:00  WARN 11005 --- [task] [    Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-03-09T16:45:01.625+07:00  WARN 11005 --- [task] [    Test worker] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+Hibernate: select i1_0.id,i1_0.item_id,i1_0.qty,i1_0.type from inventory i1_0 order by i1_0.id desc offset ? rows fetch first ? rows only
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+Hibernate: select count(i1_0.id) from inventory i1_0
+2026-03-09T16:45:01.869+07:00  WARN 11005 --- [task] [    Test worker] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
+	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
+	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
+
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+Hibernate: insert into inventory (item_id,qty,type,id) values (?,?,?,default)
+Hibernate: select i1_0.id,i1_0.item_id,i2_0.id,i2_0.name,i2_0.price,i1_0.qty,i1_0.type from inventory i1_0 join item i2_0 on i2_0.id=i1_0.item_id where i1_0.id=?
+Hibernate: select i1_0.id,i1_0.item_id,i2_0.id,i2_0.name,i2_0.price,i1_0.qty,i1_0.type from inventory i1_0 join item i2_0 on i2_0.id=i1_0.item_id where i1_0.id=?
+Hibernate: select i1_0.id,i1_0.item_id,i2_0.id,i2_0.name,i2_0.price,i1_0.qty,i1_0.type from inventory i1_0 join item i2_0 on i2_0.id=i1_0.item_id where i1_0.id=?
+Hibernate: update inventory set item_id=?,qty=?,type=? where id=?
+Hibernate: select i1_0.id,i1_0.item_id,i2_0.id,i2_0.name,i2_0.price,i1_0.qty,i1_0.type from inventory i1_0 join item i2_0 on i2_0.id=i1_0.item_id where i1_0.id=?
+Hibernate: delete from inventory where id=?
+Hibernate: select i1_0.id,i1_0.item_id,i2_0.id,i2_0.name,i2_0.price,i1_0.qty,i1_0.type from inventory i1_0 join item i2_0 on i2_0.id=i1_0.item_id where i1_0.id=?
+2026-03-09T16:45:02.156+07:00  INFO 11005 --- [task] [    Test worker] o.t.controller.InventoryControllerTest   : {"status":400,"error":"Validation Error","message":{"price":"must not be null","name":"must not be blank"}}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

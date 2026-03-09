@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="obssolution.task1.controller.OrderControllerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-03-09T09:45:02.299Z" hostname="MacBookPro" time="0.155">
+  <properties/>
+  <testcase name="createOrder()" classname="obssolution.task1.controller.OrderControllerTest" time="0.038"/>
+  <testcase name="getAllOrders()" classname="obssolution.task1.controller.OrderControllerTest" time="0.017"/>
+  <testcase name="getOrder()" classname="obssolution.task1.controller.OrderControllerTest" time="0.036"/>
+  <testcase name="updateOrderAdd1Quantity()" classname="obssolution.task1.controller.OrderControllerTest" time="0.017"/>
+  <testcase name="updateOrderAdd41Quantity()" classname="obssolution.task1.controller.OrderControllerTest" time="0.016"/>
+  <testcase name="deleteOrder()" classname="obssolution.task1.controller.OrderControllerTest" time="0.017"/>
+  <system-out><![CDATA[2026-03-09T16:45:02.300+07:00  INFO 11005 --- [task] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [obssolution.task1.controller.OrderControllerTest]: OrderControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-03-09T16:45:02.302+07:00  INFO 11005 --- [task] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration obssolution.task1.TaskApplication for test class obssolution.task1.controller.OrderControllerTest
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=? for update wait 1
+Hibernate: select (coalesce(sum(case when i1_0.type='T' then i1_0.qty else 0 end),0)-coalesce(sum(case when i1_0.type='W' then i1_0.qty else 0 end),0)) from inventory i1_0 where i1_0.item_id=?
+Hibernate: insert into inventory (item_id,qty,type,id) values (?,?,?,default)
+Hibernate: insert into orders (item_id,item_id_snapshot,price,qty,order_no) values (?,?,?,?,?)
+2026-03-09T16:45:02.341+07:00  INFO 11005 --- [task] [    Test worker] o.task1.controller.OrderControllerTest   : {"orderNo":"O1","quantity":2,"price":1.00,"item":{"id":-2000,"name":"Pencil","price":1.00}}
+Hibernate: select o1_0.order_no,o1_0.item_id,o1_0.item_id_snapshot,o1_0.price,o1_0.qty from orders o1_0 order by o1_0.order_no desc offset ? rows fetch first ? rows only
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+2026-03-09T16:45:02.353+07:00  INFO 11005 --- [task] [    Test worker] o.task1.controller.OrderControllerTest   : {"content":[{"orderNo":"O1","quantity":2,"price":1.00,"item":{"id":-2000,"name":"Pencil","price":1.00}}],"empty":false,"first":true,"last":true,"number":0,"numberOfElements":1,"pageable":{"offset":0,"pageNumber":0,"pageSize":10,"paged":true,"sort":{"empty":false,"sorted":true,"unsorted":false},"unpaged":false},"size":10,"sort":{"empty":false,"sorted":true,"unsorted":false},"totalElements":1,"totalPages":1}
+Hibernate: select o1_0.order_no,o1_0.item_id,o1_0.item_id_snapshot,o1_0.price,o1_0.qty from orders o1_0 where o1_0.order_no=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+2026-03-09T16:45:02.392+07:00  INFO 11005 --- [task] [    Test worker] o.task1.controller.OrderControllerTest   : {"orderNo":"O1","quantity":2,"price":1.00,"item":{"id":-2000,"name":"Pencil","price":1.00}}
+Hibernate: select i1_0.id,i1_0.name,i1_0.price,cast((sum(case when i2_0.type='T' then i2_0.qty else 0 end)-sum(case when i2_0.type='W' then i2_0.qty else 0 end)) as integer) from item i1_0 left join inventory i2_0 on i1_0.id=i2_0.item_id where i1_0.id=? group by i1_0.id,i1_0.name,i1_0.price
+Hibernate: select o1_0.order_no,o1_0.item_id,o1_0.item_id_snapshot,o1_0.price,o1_0.qty from orders o1_0 where o1_0.order_no=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=? for update wait 1
+Hibernate: select (coalesce(sum(case when i1_0.type='T' then i1_0.qty else 0 end),0)-coalesce(sum(case when i1_0.type='W' then i1_0.qty else 0 end),0)) from inventory i1_0 where i1_0.item_id=?
+Hibernate: insert into inventory (item_id,qty,type,id) values (?,?,?,default)
+Hibernate: update orders set item_id=?,item_id_snapshot=?,price=?,qty=? where order_no=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price,cast((sum(case when i2_0.type='T' then i2_0.qty else 0 end)-sum(case when i2_0.type='W' then i2_0.qty else 0 end)) as integer) from item i1_0 left join inventory i2_0 on i1_0.id=i2_0.item_id where i1_0.id=? group by i1_0.id,i1_0.name,i1_0.price
+Hibernate: select o1_0.order_no,o1_0.item_id,o1_0.item_id_snapshot,o1_0.price,o1_0.qty from orders o1_0 where o1_0.order_no=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=? for update wait 1
+Hibernate: select (coalesce(sum(case when i1_0.type='T' then i1_0.qty else 0 end),0)-coalesce(sum(case when i1_0.type='W' then i1_0.qty else 0 end),0)) from inventory i1_0 where i1_0.item_id=?
+2026-03-09T16:45:02.432+07:00  INFO 11005 --- [task] [    Test worker] o.task1.controller.OrderControllerTest   : {"status":400,"error":"Bad Request","message":"stock exceeds total stock"}
+Hibernate: select o1_0.order_no,o1_0.item_id,o1_0.item_id_snapshot,o1_0.price,o1_0.qty from orders o1_0 where o1_0.order_no=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price from item i1_0 where i1_0.id=?
+Hibernate: select o1_0.order_no,o1_0.item_id,o1_0.item_id_snapshot,o1_0.price,o1_0.qty from orders o1_0 where o1_0.order_no=?
+Hibernate: insert into inventory (item_id,qty,type,id) values (?,?,?,default)
+Hibernate: delete from orders where order_no=?
+Hibernate: select i1_0.id,i1_0.name,i1_0.price,cast((sum(case when i2_0.type='T' then i2_0.qty else 0 end)-sum(case when i2_0.type='W' then i2_0.qty else 0 end)) as integer) from item i1_0 left join inventory i2_0 on i1_0.id=i2_0.item_id where i1_0.id=? group by i1_0.id,i1_0.name,i1_0.price
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
